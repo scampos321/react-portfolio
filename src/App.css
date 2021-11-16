@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 :root {
-  --primary-white: #FFF
+  --primary-white: #FFF;
+  --primary-blue: #89CFF0;
+  --primary-dark: rgba(255,255,255, 0)
 }
 body {
   font-family:'Roboto Condesed' sans-serif;
 }
 /* NAV */
 nav a.nav-link {
-  letter-spacing: 0.03475rem;
+  font-size: .8rem;
+  letter-spacing: 0.0375rem;
   cursor: pointer;
 }
 
@@ -16,10 +19,10 @@ nav ul li {
 }
 
 .navbar-nav > li > a {
-  /* margin-right: 0.75rem;
-  margin-left: 0.75rem; */
-  
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
   color: var(--primary-white) !important;
+  border-top: 0.1875rem solid var(--primary-dark)
 }
 .navbar-nav {
   margin-left: auto !important;
@@ -28,4 +31,12 @@ nav ul li {
   max-width: 17.25rem;
   padding: 0 !important;
   height: 6rem !important;
+}
+
+.navbar-nav > li > a.active, .navbar-nav > li > a.active:focus  {
+  border-top: 0.1875rem solid var(--primary-blue)
+}
+
+.navbar-nav > li > a:hover {
+  border-top: 0.1875rem solid var(--primary-blue)
 }
