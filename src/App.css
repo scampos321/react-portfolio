@@ -2,7 +2,9 @@
 :root {
   --primary-white: #FFF;
   --primary-blue: #89CFF0;
-  --primary-dark: rgba(255,255,255, 0)
+  --primary-dark: rgba(255,255,255, 0);
+  --primary-red: #ef4035;
+  --primary-hover-red: #f33501;
 }
 body {
   font-family:'Roboto Condesed' sans-serif;
@@ -33,6 +35,12 @@ nav ul li {
   height: 6rem !important;
 }
 
+@media(max-width: 768px) {
+  .navbar-brand {
+    width: 7rem;
+  }
+}
+
 .navbar-nav > li > a.active, .navbar-nav > li > a.active:focus  {
   border-top: 0.1875rem solid var(--primary-blue)
 }
@@ -52,21 +60,66 @@ nav ul li {
 
 .main-info {
   display:flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-family:'Roboto Condesed' sans-serif;
+  z-index: 1;
 }
-
+@media(max-width: 768px) {
+  .main-info h1 {
+    font-size: 1.5rem !important;
+  }
+}
 .main-info h1 {
   color: var(--primary-blue);
   text-transform: uppercase;
 }
 
 /* ------Typed Text ----- */
-
+@media(max-width: 768px) {
+  .main-info h1 {
+    font-size: 1.5rem !important;
+  }
+  .typed-text {
+    font-size: 1.7rem !important;
+  }
+}
 .typed-text {
   font-size: 2rem;
   color: var(--primary-white);
+}
+
+.btn-main-offer {
+  text-decoration: none;
+  border: 1px solid var(--primary-red);
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 0.0625rem 0.75rem 0.75rem 0.75rem;
+  color: var(--primary-white);
+  margin: 2rem;
+}
+.btn-main-offer:hover {
+  text-decoration: none;
+  background-color: var(--primary-hover-red);
+  color: var(--primary-white);
+  transition: .2s ease-in-out;
+}
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+@media(max-width: 768px) {
+  .particles-canvas {
+    display: none;
+  }
 }
