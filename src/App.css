@@ -2,9 +2,14 @@
 :root {
   --primary-white: #FFF;
   --primary-blue: #89CFF0;
+  --primary-grey: #ccd1d9;
+  --primary-dark-grey: #666666;
+  --primary-light-grey: #f4f4f4;
   --primary-dark: rgba(255,255,255, 0);
   --primary-red: #ef4035;
   --primary-hover-red: #f33501;
+  --primary-black: #000000;
+  --primary-dark-blue: #1F5ACB;
 }
 body {
   font-family:'Roboto Condesed' sans-serif;
@@ -149,5 +154,82 @@ nav ul li {
 @media(max-width: 468px) {
   .profile-img {
     width: 10rem;
+  }
+}
+
+/* ------Portfolio------ */
+
+.portfolio-wrapper {
+  background: var(--primary-blue);
+  padding: 3rem 0;
+}
+
+.portfolio-image {
+  width: 15rem;
+  border: 1px solid var(--primary-red);
+  padding: 0 0.5rem;
+}
+
+.portfolio-image-box {
+  position: relative;
+  margin: 1rem;
+}
+
+.overflow {
+  position: absolute;
+  opacity: 0;
+  background: var(--primary-black);
+  width: 15rem;
+  height: 8rem;
+  top: 0;
+  border: 1px solid var(--primary-red);
+  cursor: pointer;
+}
+
+.portfolio-image-box:hover .overflow {
+  opacity: 60%;
+  transition: 0.3s ease-in-out;
+}
+
+/* ------Popup box----- */
+
+.portfolio-image-popupbox {
+  width: 45rem;
+  padding: 0.5rem;
+}
+
+.hyper-link {
+  cursor: pointer;
+  color: var(--primary-dark-blue);
+  text-decoration: none;
+}
+
+.hyper-link:hover {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+/* -----------Media ----------*/
+
+@media(max-width: 768px) {
+  .portfolio-image-popupbox {
+      width: 100%;
+  }
+}
+
+@media(max-height: 570px) {
+  .popupbox-wrapper {
+    height: 100%;
+  }
+  .portfolio-image-popupbox {
+      width: 50%;
+  }
+}
+
+@media(max-height: 280px) {
+  .popupbox-wrapper {
+    height: 90%;
+  }
+  .portfolio-image-popupbox {
+      width: 50%;
   }
 }
