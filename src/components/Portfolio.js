@@ -5,6 +5,7 @@ import noteTaker from '../images/note-taker.png'
 import passwordGen from '../images/passwordgen-image.png'
 import {PopupboxManager, PopupboxContainer} from "react-popupbox"
 import "react-popupbox/dist/react-popupbox.css";
+import { Link } from "react-router-dom";
 const Portfolio = () => {
     const openPopupboxPlanner = () => {
 
@@ -12,7 +13,7 @@ const Portfolio = () => {
         <>
         <img className="portfolio-image-popupbox" src={planner} alt="Planner"/>
             <p></p>
-            <b>Deployed: </b> <a className="hyper-link" onClick={() => window.open("https://scampos321.github.io/day-planner/")}>https://scampos321.github.io/day-planner/</a>
+            <b>Deployed: </b> <Link className="hyper-link" onClick={() => window.open("https://scampos321.github.io/day-planner/")}>https://scampos321.github.io/day-planner/</Link>
         </>
     )
         PopupboxManager.open({ content })
@@ -32,7 +33,7 @@ const Portfolio = () => {
             <>
             <img className="portfolio-image-popupbox" src={lostChef} alt="Lost Chef"/>
                 <p></p>
-                <b>GitHub:</b> <a className="hyper-link" onClick={() => window.open("https://github.com/jeffcela/The_Lost_Chef")}>https://github.com/jeffcela/The_Lost_Chef</a>
+                <b>GitHub:</b> <Link className="hyper-link" onClick={() => window.open("https://github.com/jeffcela/The_Lost_Chef")}>https://github.com/jeffcela/The_Lost_Chef</Link>
             </>
         )
             PopupboxManager.open({ content })
@@ -52,8 +53,8 @@ const Portfolio = () => {
                 <>
                 <img className="portfolio-image-popupbox" src={noteTaker} alt="Note Taker"/>
                     <p></p>
-                    <b>Deployed: </b><a className="hyper-link" onClick={() => window.open("https://stark-brook-30614.herokuapp.com/")}>https://stark-brook-30614.herokuapp.com/</a>
-                    <b>GitHub: </b> <a className="hyper-link" onClick={() => window.open("https://github.com/scampos321/note-taker")}>https://github.com/scampos321/note-taker</a>
+                    <b>Deployed: </b><Link className="hyper-link" onClick={() => window.open("https://stark-brook-30614.herokuapp.com/")}>https://stark-brook-30614.herokuapp.com/</Link>
+                    <b>GitHub: </b> <Link className="hyper-link" onClick={() => window.open("https://github.com/scampos321/note-taker")}>https://github.com/scampos321/note-taker</Link>
                 </>
             )
                 PopupboxManager.open({ content })
@@ -74,8 +75,8 @@ const Portfolio = () => {
                 <>
                 <img className="portfolio-image-popupbox" src={passwordGen} alt="Note Taker"/>
                     <p></p>
-                    <b>Deployed:</b> <a className="hyper-link" onClick={() => window.open("https://github.com/jeffcela/The_Lost_Chef")}>https://github.com/jeffcela/The_Lost_Chef</a>
-                    <b>GitHub:</b> <a className="hyper-link" onClick={() => window.open("https://github.com/jeffcela/The_Lost_Chef")}>https://github.com/jeffcela/The_Lost_Chef</a>
+                    <b>Deployed:</b> <Link className="hyper-link" onClick={() => window.open("https://github.com/jeffcela/The_Lost_Chef")}>https://github.com/jeffcela/The_Lost_Chef</Link>
+                    <b>GitHub:</b> <Link className="hyper-link" onClick={() => window.open("https://github.com/jeffcela/The_Lost_Chef")}>https://github.com/jeffcela/The_Lost_Chef</Link>
                 </>
             )
                 PopupboxManager.open({ content })
